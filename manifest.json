@@ -2,5 +2,11 @@
   "manifest_version": 3,
   "name": "SourceNav",
   "version": "0.1.0",
-  "description": "Research, organized by project."
+  "description": "Research, organized by project.",
+
+  "permissions": ["storage", "activeTab"],
+
+  "action": {
+    "default_popup": "popup.html"
+  }
 }

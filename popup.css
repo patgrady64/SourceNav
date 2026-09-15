@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  margin: 0;
+  padding: 16px;
+
+  font-family: Arial, sans-serif;
+
+  background: #17191d;
+  color: #f2f2f2;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.tagline {
+  margin-top: 4px;
+  margin-bottom: 0;
+
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.current-page {
+  margin-bottom: 20px;
+}
+
+.current-page h2,
+.projects-section h2 {
+  margin: 0 0 10px 0;
+
+  font-size: 16px;
+}
+
+.page-card {
+  padding: 10px 12px;
+
+  background: #22252b;
+
+  border: 1px solid #343941;
+  border-radius: 5px;
+}
+
+.page-title {
+  margin-bottom: 5px;
+
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.page-url {
+  color: #7f8794;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.save-page {
+  width: 100%;
+
+  margin-top: 10px;
+  padding: 8px 10px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #5b8cff;
+  color: white;
+
+  cursor: pointer;
+}
+
+.save-page:hover {
+  background: #4776df;
+}
+
+.save-page:disabled {
+  background: #3a3f48;
+  color: #7f8794;
+
+  cursor: default;
+}
+
+.save-status {
+  margin-top: 7px;
+
+  color: #8fa8d8;
+  font-size: 11px;
+}
+
+.new-project {
+  display: flex;
+  gap: 8px;
+}
+
+.new-project input {
+  flex: 1;
+
+  min-width: 0;
+  padding: 8px 10px;
+
+  border: 1px solid #3a3f48;
+  border-radius: 5px;
+
+  background: #22252b;
+  color: #f2f2f2;
+
+  outline: none;
+}
+
+.new-project input:focus {
+  border-color: #5b8cff;
+}
+
+.new-project button {
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #5b8cff;
+  color: white;
+
+  cursor: pointer;
+}
+
+.new-project button:hover {
+  background: #4776df;
+}
+
+#projectList {
+  margin-top: 12px;
+}
+
+.empty-state {
+  padding: 14px;
+
+  border: 1px dashed #3a3f48;
+  border-radius: 5px;
+
+  color: #7f8794;
+
+  font-size: 13px;
+  text-align: center;
+}
+
+.project {
+  margin-top: 8px;
+
+  background: #22252b;
+
+  border: 1px solid #343941;
+  border-radius: 5px;
+
+  overflow: hidden;
+}
+
+.project.active {
+  border-color: #5b8cff;
+}
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 9px 10px 9px 8px;
+
+  cursor: pointer;
+}
+
+.project-header:hover {
+  background: #292d34;
+}
+
+.project.active .project-header {
+  background: #292f3a;
+}
+
+.project-main {
+  display: flex;
+  align-items: center;
+
+  min-width: 0;
+
+  gap: 6px;
+}
+
+.project-arrow {
+  display: inline-block;
+
+  color: #8b93a1;
+
+  font-size: 18px;
+  line-height: 1;
+
+  transition: transform 0.12s ease;
+}
+
+.project:hover .project-arrow,
+.project.active .project-arrow {
+  transform: rotate(90deg);
+}
+
+.project-name {
+  overflow: hidden;
+
+  font-size: 14px;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.delete-project {
+  padding: 5px 8px;
+
+  border: none;
+  border-radius: 4px;
+
+  background: #3a3f48;
+  color: #d1d5db;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.delete-project:hover {
+  background: #b04444;
+  color: white;
+}
+
+.project-sources {
+  display: none;
+
+  padding: 4px 10px 10px 28px;
+
+  border-top: 1px solid #343941;
+}
+
+.project:hover .project-sources,
+.project.active .project-sources {
+  display: block;
+}
+
+.source-item {
+  padding: 8px 0;
+
+  border-bottom: 1px solid #30343b;
+}
+
+.source-item:last-child {
+  border-bottom: none;
+}
+
+.source-link {
+  display: block;
+
+  width: 100%;
+  padding: 0;
+
+  border: none;
+
+  background: none;
+  color: #8fb0ff;
+
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+.source-url {
+  margin-top: 3px;
+
+  color: #666f7c;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty-sources {
+  padding-top: 6px;
+
+  color: #6f7783;
+
+  font-size: 11px;
+}
+
+.project-count {
+  margin-left: 6px;
+
+  color: #6f7783;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}

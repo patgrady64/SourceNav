@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>SourceNav</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>SourceNav</h1>
+      <p class="tagline">Research, organized by project.</p>
+    </header>
+
+    <section class="current-page">
+      <h2>Current Page</h2>
+
+      <div class="page-card">
+        <div id="currentPageTitle" class="page-title">Loading...</div>
+
+        <div id="currentPageUrl" class="page-url"></div>
+
+        <button id="savePage" class="save-page">Save to Active Project</button>
+
+        <div id="saveStatus" class="save-status"></div>
+      </div>
+    </section>
+
+    <section class="projects-section">
+      <h2>Projects</h2>
+
+      <div class="new-project">
+        <input type="text" id="projectName" placeholder="New project name" />
+
+        <button id="addProject">Add</button>
+      </div>
+
+      <div id="projectList">
+        <div class="empty-state">No projects yet.</div>
+      </div>
+    </section>
+    <script src="popup.js"></script>
+  </body>
+</html>
