@@ -7,38 +7,67 @@
   </head>
 
   <body>
-    <header>
-      <h1>SourceNav</h1>
-      <p class="tagline">Research, organized by project.</p>
-    </header>
+    <div class="app">
+      <aside id="sourceFlyout" class="source-flyout">
+        <div class="flyout-header">
+          <h2 id="flyoutProjectName">Project</h2>
+          <div id="flyoutPageCount" class="flyout-count"></div>
+        </div>
 
-    <section class="current-page">
-      <h2>Current Page</h2>
+        <div id="flyoutSources"></div>
+      </aside>
 
-      <div class="page-card">
-        <div id="currentPageTitle" class="page-title">Loading...</div>
+      <div class="main-panel">
+        <header>
+          <h1>SourceNav</h1>
+          <p class="tagline">Research, organized by project.</p>
+        </header>
 
-        <div id="currentPageUrl" class="page-url"></div>
+        <section class="current-page">
+          <h2>Current Page</h2>
 
-        <button id="savePage" class="save-page">Save to Active Project</button>
+          <div class="page-card">
+            <div id="currentPageTitle" class="page-title">Loading...</div>
 
-        <div id="saveStatus" class="save-status"></div>
+            <div id="currentPageUrl" class="page-url"></div>
+
+            <label class="save-title-label" for="savePageTitle">
+              Save page as
+            </label>
+
+            <input
+              type="text"
+              id="savePageTitle"
+              class="save-title-input"
+              placeholder="Page name"
+            />
+
+            <button id="savePage" class="save-page">
+              Save to Active Project
+            </button>
+
+            <div id="saveStatus" class="save-status"></div>
+          </div>
+        </section>
+
+        <section class="projects-section">
+          <h2>Projects</h2>
+
+          <div class="new-project">
+            <input
+              type="text"
+              id="projectName"
+              placeholder="New project name"
+            />
+
+            <button id="addProject">Add</button>
+          </div>
+
+          <div id="projectList"></div>
+        </section>
       </div>
-    </section>
+    </div>
 
-    <section class="projects-section">
-      <h2>Projects</h2>
-
-      <div class="new-project">
-        <input type="text" id="projectName" placeholder="New project name" />
-
-        <button id="addProject">Add</button>
-      </div>
-
-      <div id="projectList">
-        <div class="empty-state">No projects yet.</div>
-      </div>
-    </section>
     <script src="popup.js"></script>
   </body>
 </html>
